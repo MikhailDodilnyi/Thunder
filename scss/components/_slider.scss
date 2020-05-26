@@ -1,0 +1,61 @@
+.slick-list {
+    overflow: hidden;
+}
+
+.slick-list.draggable {
+    padding: 0 !important;
+}
+
+.slider .slick-active {
+    opacity: 1;
+}
+
+.slider.slick-initialized .slick-slide {
+    display: flex;
+}
+
+.slider-3 {
+    display: flex;
+    justify-content: center;
+}
+
+.slider {
+    position: relative;
+}
+
+.slider .slick-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    font-size: 0;
+    margin: -30px 0 0;
+    border: none;
+    cursor: pointer;
+}
+   
+.slider .slick-arrow.slick-prev {
+    left: 0;
+    background: url(../images/prev.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: $black; 
+    width: 24px;
+    height: 33px;
+    padding: 23.5px 18.5px;
+}
+
+
+.slider .slick-arrow.slick-next {
+    right: 0;
+    background: url(../images/next.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: $black;
+    width: 24px;
+    height: 33px;
+    padding: 23.5px 18.5px;
+}
+
+* {
+    outline: none;
+}

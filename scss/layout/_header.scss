@@ -1,0 +1,138 @@
+body {
+	margin: 0;
+	min-height: 100vh;
+}
+
+.header {
+	position: relative;
+    padding: 10px;
+	background-color: $black;
+}
+
+.intro {
+	display: block;
+	padding: 20px 0;
+
+	@include media ('>=tablet') {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.header-holder {
+	display: flex;	
+	justify-content: space-between;
+
+	@include media ('>=tablet') {
+		display: block;
+	}
+	
+}
+
+.logo {
+	display: block;
+}
+
+.menu-opener {
+	display: inline-block;
+	vertical-align: top;
+	width: 40px;
+	height: 40px;
+	background-color: $light-green;
+	position: relative;
+	border-radius: 3px;
+
+	@include media ('>=tablet') {
+		display: none;
+	}
+}
+
+.menu-opener span, 
+.menu-opener::before,
+.menu-opener::after {
+	background-color: $white;
+	border-radius: 4px;
+	position: absolute;
+	top: 50%;
+	left: 25%;
+	right: 25%;
+	height: 4px;
+	margin-top: -2px;
+	transition: all .3s linear;
+}
+
+.menu-opener::before,
+.menu-opener::after {
+	content: '';
+	top: 30%;
+}
+
+.menu-opener::after {
+	top: 70%;
+}
+
+.mobile-menu-active .menu-opener span {
+	opacity: 0;
+}
+
+.mobile-menu-active .menu-opener::before,
+.mobile-menu-active .menu-opener::after {
+	transform: rotate(45deg);
+	top: 50%;
+	left: 15%;
+	right: 15%;
+}
+
+.mobile-menu-active .menu-opener::after {
+	transform: rotate(-45deg);
+}
+
+.menu {
+    background-color: rgba(0, 0, 0, 0.9);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position: absolute;
+	top: 100%;
+	right: 0;
+	left: 0;
+	transform: scale(0.9);
+	opacity: 0.5;
+	visibility: hidden;
+	transition: opacity	.3s ease-in-out, visibility .3s ease-in-out, transform .3s ease-in-out;
+	z-index: 100;
+
+	.active {
+		color: $light-green;
+		border: 1px solid $light-green;
+	}
+
+	@include media ('>=tablet') {
+		opacity: 1;
+		visibility: visible;
+		display: flex;
+		position: static;
+	}
+}
+
+.mobile-menu-active .menu {
+	opacity: 1;
+	visibility: visible;
+	transform: scale(1);
+}
+
+.menu a {
+	color: #888;
+	text-decoration: none;
+	display: block;
+	padding: 10px;
+	transition: color .3s ease-in-out;
+}
+
+.menu li {
+    text-transform: uppercase;
+}
+
+.menu a:hover {
+	color: $white;
+}

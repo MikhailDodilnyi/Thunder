@@ -1,0 +1,51 @@
+// Переменные цветов
+
+$gray: #999;
+$blue: #007bff;
+$dark-blue: #0069d9;
+$green: #28a745;
+$dark-green: #218838;
+$red: #f00;
+$yellow: #ff0;
+
+$light-green: #65c25d;
+$gray-dark: #787878;
+$white-light: #f1f1f1;
+$gray-light: #aaa;
+$black-light: #222;
+$gray-middle: #e4e4e4;
+
+$black: #000;
+$white: #fff;
+
+$base-font-sans-serif: 'Open Sans', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+$base-font-serif: 'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
+$nav-font-sans-serif: 'Roboto-black', sans-serif;
+$title-head-sans: 'PlayfairDisplay-black', serif;
+
+// Основной размер и цвет текста, семейство шрифта и цвет фона
+$base-text-color: $black;
+$base-background-color: $white !default;
+$font-size-base: 16px !default;
+$line-height-base: 1.2 !default;
+$base-font-family: $base-font-sans-serif !default;
+$nav-font-family: $nav-font-sans-serif;
+$title-head-font: $title-head-sans;
+
+$base-min-width: 320px;
+
+// Цвет глобальной ссылки
+$base-link-color: $red;
+
+// Формы
+$form-element-border-color: $gray;
+$form-element-focus-border-color: $black;
+$placeholder-color: $gray ;
+
+// Переменные font-size для заголовков
+$h1-font-size: 38px;
+$h2-font-size: 32px;
+$h3-font-size: 24px;
+$h4-font-size: 22px;
+$h5-font-size: 16px;
+$h6-font-size: 13px;

@@ -1,0 +1,125 @@
+// card for first section
+.card {
+    margin: 30px 16px;
+
+    @include media ('>=phone') {
+        margin: 40px 16px;
+    }
+
+    @include media ('>=tablet') {
+        margin: 50px 16px;
+        width: calc(50% - 32px);
+    }
+
+    @include media ('>=desktop') {
+        margin: 60px 16px;
+    }
+
+    &-title {
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 36px;
+    }
+
+    &-image {
+        display: block;
+        margin: 30px auto;
+    }
+
+    &-description {
+        text-align: center;
+    }
+}
+
+// section-2 card
+.card-portfolio {
+    width: 100%;
+    margin: 10px;
+    position: relative;
+
+    @include media ('>=xs-phone') {
+        width: calc(50% - 20px);
+    }
+
+    @include media ('>=tablet') {
+        width: calc(33.33% - 20px);
+    }
+
+    @include media ('>=desktop') {
+        width: calc(25% - 20px);
+    }
+    
+    img {
+        width: 100%;
+        display: block;
+    }
+}
+
+.card-portfolio:hover .hover-box {
+    opacity: 1;
+}
+
+.card-portfolio .hover-box {
+    opacity: 0;
+    position: absolute;
+    top: 0%;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    transition: opacity 0.3s ease-in-out;
+    background-color: rgba(41, 47, 54, .3);
+}
+
+.content-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+
+    .text-portfolio {
+        text-align: center;  
+        text-transform: capitalize;
+        color: $white;
+        width: 100%;
+    }
+
+    .btn-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    
+        li {
+            position: relative;
+            margin: 3.5px;
+            opacity: 0.4;
+            border-radius: 3px;
+            transition: opacity 0.3s ease-in-out;
+    
+            &:hover {
+                opacity: 1;
+            }
+        }
+    
+        a {
+            text-decoration: none;
+            width: 27px;
+            height: 27px;
+            background-color: $light-green;
+            display: block;
+        }
+    
+        i {
+            color: $white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
